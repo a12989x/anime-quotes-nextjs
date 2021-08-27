@@ -1,11 +1,14 @@
 import { QuoteContext } from '@/context/QuoteContext';
-import RefreshIcon from '@/public/svg/refresh.svg';
+import RefreshDarkIcon from '@/public/svg/refresh-dark.svg';
+import RefreshLightIcon from '@/public/svg/refresh-light.svg';
 import { UPDATE_QUOTE } from '@/store/actions/quoteActions';
+import { useTheme } from 'next-themes';
 import Image from 'next/image';
 import { useContext } from 'react';
 
-const ReloadButton = () => {
+const RefreshButton = () => {
   const { quoteDispatch } = useContext(QuoteContext);
+  const { theme, resolvedTheme } = useTheme();
 
   const handleClick = async () => {
     try {
@@ -22,9 +25,13 @@ const ReloadButton = () => {
 
   return (
     <button className='button reloadButton' onClick={handleClick}>
-      <Image src={RefreshIcon} alt='refresh icon' />
+      {theme === 'light' || resolvedTheme === 'light' ? (
+        <Image src={RefreshLightIcon} alt='refresh icon' />
+      ) : (
+        <Image src={RefreshDarkIcon} alt='refresh icon' />
+      )}
     </button>
   );
 };
 
-export default ReloadButton;
+export default RefreshButton;
