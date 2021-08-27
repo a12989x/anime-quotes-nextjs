@@ -1,8 +1,13 @@
 @use '../abstracts/variables' as *;
 
 .button {
-  padding: 0.5rem;
+  padding: 0;
+  height: 40px;
+  width: 40px;
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: $light-gray-color;
   border: none;
   border-radius: 0.3125rem;
