@@ -7,9 +7,9 @@ html:root {
 
 html[data-theme='dark'] {
   --text-color: #f9f9f9;
-  --dark-gray-color: #e8e8e8;
-  --light-gray-color: #161616;
-  --background-color: #212121;
+  --light-gray-color: #212121;
+  --dark-gray-color: #161616;
+  --background-color: #111111;
 }
 
 $text-color: var(--text-color);
