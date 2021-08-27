@@ -1,0 +1,18 @@
+html:root {
+  --text-color: #212121;
+  --light-gray-color: #e8e8e8;
+  --dark-gray-color: #e2e2e2;
+  --background-color: #f9f9f9;
+}
+
+html[data-theme='dark'] {
+  --text-color: #f9f9f9;
+  --dark-gray-color: #e8e8e8;
+  --light-gray-color: #161616;
+  --background-color: #212121;
+}
+
+$text-color: var(--text-color);
+$dark-gray-color: var(--dark-gray-color);
+$light-gray-color: var(--light-gray-color);
+$background-color: var(--background-color);
