@@ -1,6 +1,6 @@
+import { QuoteActionsType } from '@/store/actions/quoteActions';
+import quoteReducer, { initialState } from '@/store/reducers/quoteReducer';
 import { createContext, Dispatch, FC, ReactNode, useReducer } from 'react';
-import { QuoteActionsType } from '../store/actions/quoteActions';
-import quoteReducer, { initialState } from '../store/reducers/quoteReducer';
 import { IQuote } from '../types';
 
 interface IContext {
