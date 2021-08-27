@@ -1,8 +1,14 @@
-const Home = () => {
+import AnimeQuote from '@/components/AnimeQuote';
+import ReloadButton from '@/components/ReloadButton';
+import { NextPage } from 'next';
+
+const Home: NextPage = () => {
   return (
-    <div>
-      <p>Home page component</p>
-    </div>
+    <section className='home'>
+      <ReloadButton />
+
+      <AnimeQuote />
+    </section>
   );
 };
 
