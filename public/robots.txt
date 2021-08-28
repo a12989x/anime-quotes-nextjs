@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://anime-quotes-pwa.vercel.app/sitemap.xml
