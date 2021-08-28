@@ -14,15 +14,7 @@ export const QuoteContext = createContext<IContext>({
 });
 
 const QuoteContextProvider: FC<{ children: ReactNode }> = ({ children }) => {
-  const [quoteState, quoteDispatch] = useReducer(
-    quoteReducer,
-    initialState,
-    () => ({
-      quote: 'Anime Quote Init',
-      anime: 'Anime Anime Init',
-      character: 'Anime Character Init',
-    })
-  );
+  const [quoteState, quoteDispatch] = useReducer(quoteReducer, initialState);
 
   return (
     <QuoteContext.Provider value={{ quoteState, quoteDispatch }}>
