@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://losapuntesdemajo-five.vercel.app/sitemap.xml
+Sitemap: https://anime-quotes-pwa.vercel.app/sitemap.xml
