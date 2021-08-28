@@ -1,4 +1,5 @@
 import { QuoteContext } from '@/context/QuoteContext';
+import getQuote from '@/lib/getQuote';
 import RefreshDarkIcon from '@/public/svg/refresh-dark.svg';
 import RefreshLightIcon from '@/public/svg/refresh-light.svg';
 import { UPDATE_QUOTE } from '@/store/actions/quoteActions';
@@ -12,11 +13,7 @@ const RefreshButton = () => {
 
   const handleClick = async () => {
     try {
-      const newQuote = {
-        anime: 'Quote Anime New',
-        character: 'Quote Character New',
-        quote: 'Quote Quote New',
-      };
+      const newQuote = await getQuote();
       quoteDispatch({ type: UPDATE_QUOTE, payload: newQuote });
     } catch (err) {
       throw new Error('Cant Get New Quote');
